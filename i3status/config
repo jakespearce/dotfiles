@@ -1,0 +1,46 @@
+# i3status configuration file.
+# see "man i3status" for documentation.
+
+# It is important that this file is edited as UTF-8.
+# The following line should contain a sharp s:
+# ß
+# If the above line is not correctly displayed, fix your editor first!
+
+general {
+        colors = true
+        interval = 2
+}
+
+order += "wireless _first_"
+order += "volume master"
+order += "battery 0"
+order += "tztime local"
+
+wireless _first_ {
+        format_up = ""
+        format_down = " no wireless (;;*_*) "
+}
+
+volume master {
+	format = " vol:%volume "
+	format_muted = " mute (x . x) ~~zzZ "
+	device = "default"
+	mixer = "Master"
+	mixer_idx = 0
+
+}
+
+battery 0 {
+        format = "%status"
+        format_down = " no battery "
+        status_chr = " charging! "
+        status_bat = " ⚡ battery "
+        status_full = ""
+        path = "/sys/class/power_supply/BAT%d/uevent"
+        low_threshold = 20
+}
+
+tztime local {
+        format = " %d-%m-%Y %H:%M:%S"
+}
+

@@ -1,0 +1,73 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# [user@host:working/directory] % (All in bold white, % is in cyan)
+PS1="\[\e[1m\][\u@\h:\w] \[\e[36;1m\]%\[\e[0m\]\n"
+
+
+alias ..='cd ..'
+
+alias ...='cd ../..'
+
+alias ....='cd ../../..'
+
+alias ls='ls --color=auto'
+
+alias sl='ls'
+
+alias lshalt='ls -halt'
+
+alias lsd='ls -dl */'
+
+alias mkdir='mkdir -p'
+
+
+# Extracts things
+extract(){
+    
+	if [ -f $1 ] ; then
+        case $1 in
+            *.tar.bz2)   tar xvjf $1     ;;  
+            *.tar.gz)    tar xvzf $1     ;;  
+            *.bz2)       bunzip2 $1      ;;  
+            *.rar)       unrar x $1      ;;  
+            *.gz)        gunzip $1       ;;
+            *.tar)       tar xvf $1      ;;  
+            *.tbz2)      tar xvjf $1     ;;  
+            *.tgz)       tar xvzf $1     ;;  
+            *.zip)       unzip $1        ;;
+            *.Z)         uncompress $1   ;;  
+            *.7z)        7z x $1         ;;
+            *)           echo "'$1' cannot be extracted via >extract<" ;;
+        esac
+    else
+        echo "'$1' is not a valid file!"
+    fi 
+
+}
+
+# Sets the background to the image supplied as argument
+set_bg_to(){
+
+	image="$1"
+	[ -z "$image" ] && echo "No image argument given" || feh --bg-scale "$image"
+
+}
+
+# Turns secondary HDMI display output on if HDMI is plugged in, off if it isn't
+set_display(){
+
+	IN="eDP-1"
+	EXT="HDMI-1"
+	
+	if (xrandr | grep "$EXT disconnected"); then
+	    xrandr --output $IN --auto --output $EXT --off 
+	else
+	    xrandr --output $IN --auto --primary --output $EXT --auto --right-of $IN                   
+	fi
+}
+

@@ -1,0 +1,26 @@
+
+" allow syntax highlighting
+filetype plugin on
+syntax on
+
+" show numbers
+set number
+
+" make tab 4 spaces instead of the default 8
+set tabstop=4
+
+" ignore cases when pattern matching
+set ignorecase
+
+" search with cases if upper case is used
+set smartcase
+
+" auto-indentation, eg. ff previous line starts with a tab, new line will too
+set autoindent
+
+" show horizontal line on line cursor is on
+set cursorline
+
+" search as characters are entered
+set incsearch
+

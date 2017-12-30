@@ -1,0 +1,37 @@
+[global_config]
+  borderless = True
+  extra_styling = False
+  inactive_color_offset = 0.836633663366
+  title_font = Terminus Bold 10
+  title_inactive_bg_color = "#6b6b6b"
+  title_inactive_fg_color = "#ffffff"
+  title_transmit_bg_color = "#323232"
+  title_use_system_font = False
+[keybindings]
+  close_term = <Primary>w
+  split_horiz = <Primary><Shift>Down
+  split_vert = <Primary><Shift>Right
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    background_color = "#5c3566"
+    background_darkness = 0.68
+    background_type = transparent
+    copy_on_selection = True
+    cursor_color = "#ffffff"
+    font = xos4 Terminus 13
+    foreground_color = "#ffffff"
+    icon_bell = False
+    palette = "#000000:#cd0000:#00cd00:#cdcd00:#a2a2ff:#cd00cd:#00cdcd:#e5e5e5:#7f7f7f:#ff0000:#00ff00:#ffff00:#c2ccff:#ff00ff:#00ffff:#ffffff"
+    scrollback_lines = 1056
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
