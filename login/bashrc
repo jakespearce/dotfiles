@@ -23,6 +23,8 @@ alias lshalt='ls -halt'
 
 alias lsd='ls -dl */'
 
+alias hidden='ls -ld .*'
+
 alias mkdir='mkdir -p'
 
 
