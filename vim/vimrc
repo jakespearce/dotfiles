@@ -24,3 +24,9 @@ set cursorline
 " search as characters are entered
 set incsearch
 
+" spell checker, F4 turns on/off
+" [s for next misspelling, z= to suggest spellings
+set spell spelllang=en_gb
+set spell!
+nnoremap <F4> :set spell!<CR><Bar>:echo "Spell Check: " . strpart("OffOn", 3 * &spell, 3)<CR>
+

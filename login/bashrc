@@ -60,6 +60,14 @@ set_bg_to(){
 
 }
 
+# Inserts a shebang to the first line of a new *.sh file
+# Note: exiting the file without saving will not discard the new *.sh file
+vim_executable=$( which vim )
+vim(){
+	
+	[[ $# -eq 1  ]] &&  [[ ! -e "$1" ]] &&  [[ $1 = *.sh ]] && echo "#!/bin/bash" > "$1" ; "$vim_executable" "$1"
+}
+
 # Turns secondary HDMI display output on if HDMI is plugged in, off if it isn't
 set_display(){
 
