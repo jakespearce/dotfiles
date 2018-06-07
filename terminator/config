@@ -27,7 +27,7 @@
     background_type = transparent
     copy_on_selection = True
     cursor_color = "#ffffff"
-    font = xos4 Terminus 13
+    font = Monospace 13
     foreground_color = "#ffffff"
     icon_bell = False
     palette = "#000000:#cd0000:#00cd00:#cdcd00:#a2a2ff:#cd00cd:#00cdcd:#e5e5e5:#7f7f7f:#ff0000:#00ff00:#ffff00:#c2ccff:#ff00ff:#00ffff:#ffffff"

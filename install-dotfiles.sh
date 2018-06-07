@@ -15,7 +15,6 @@ dotfiles_dir="${HOME}/dotfiles"
 # Paths for dotfiles
 
 vimrc_dotfile="${dotfiles_dir}/vim/vimrc"
-compton_dotfile="${dotfiles_dir}/compton/compton.conf"
 i3_dotfile="${dotfiles_dir}/i3/config"
 i3status_dotfile="${dotfiles_dir}/i3status/config"
 bashrc_dotfile="${dotfiles_dir}/login/bashrc"
@@ -25,7 +24,6 @@ terminator_dotfile="${dotfiles_dir}/terminator/config"
 # Symlink targets
 
 vimrc_symlink_target="${HOME}/.vimrc"
-compton_symlink_target="${HOME}/.config/compton/compton.conf"
 i3_symlink_target="${HOME}/.config/i3/config"
 i3status_symlink_target="${HOME}/.config/i3status/config"
 bashrc_symlink_target="${HOME}/.bashrc"
@@ -53,7 +51,6 @@ create_symlink_to_dotfile(){
 
 # Function calls
 create_symlink_to_dotfile "$vimrc_symlink_target"  "$vimrc_dotfile"
-create_symlink_to_dotfile "$compton_symlink_target" "$compton_dotfile"
 create_symlink_to_dotfile "$i3_symlink_target" "$i3_dotfile"
 create_symlink_to_dotfile "$i3status_symlink_target" "$i3status_dotfile"
 create_symlink_to_dotfile "$bashrc_symlink_target" "$bashrc_dotfile"
