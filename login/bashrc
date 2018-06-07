@@ -7,7 +7,7 @@
 
 # [user@host:working/directory] $ 
 # All in bold white, hostname is green, $ is in cyan
-PS1='\[\e[1m\][\u@\e[32;1m\h\e[m:\w] \[\e[36;1m\]\$\[\e[0m\]\n'
+PS1='\[\e[1m\][\u@\e[32;1m\h\e[m:\[\e[1m\]\w] \[\e[36;1m\]\$\[\e[0m\]\n'
 
 
 alias ..='cd ..'
