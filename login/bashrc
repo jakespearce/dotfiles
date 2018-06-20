@@ -20,6 +20,10 @@ alias ls='ls --color=auto'
 
 alias sl='ls'
 
+alias less='less -N'
+
+alias lock='i3lock -i ~/pictures/Wallpapers/windows-xp-bg.png -t -p win -u'
+
 alias lshalt='ls -halt'
 
 alias lsd='ls -dl */'
@@ -28,6 +32,21 @@ alias hidden='ls -ld .*'
 
 alias mkdir='mkdir -p'
 
+# Less verbose way of connecting to new wireless network using NetworkManager
+wifi_connect(){
+
+	ssid="$1"
+	psswd="$2"
+	chosenName="$3"
+
+	if [ $# -ne 3 ]; then 
+		echo -e "Usage:\n$ wifi_connect ssid passwd chosenName"
+		return
+	else
+		nmcli dev wifi con "$ssid" password "$psswd" name "$chosenName"
+	fi
+
+}
 
 # Extracts things
 extract(){

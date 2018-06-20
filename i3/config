@@ -157,11 +157,15 @@ bindsym XF86AudioLowerVolume exec amixer -q set Master 1%- unmute
 # mute volume
 bindsym XF86AudioMute exec amixer -q set Master mute
 
+# Backlight Controls
+bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
+
 # colours
 # window borders
 # Key:  <colorclass> <border> <background> <text>
 
-client.focused #575757 #575757 #eaeaea #575757 #575757
+client.focused #575757 #575757 #E2AA3B #575757 #575757
 client.focused_inactive #575757 #575757 #eaeaea #575757 #575757
 client.background #A1EEFF
 
@@ -173,14 +177,12 @@ bar {
     status_command i3status
 	position top
 	colors {
-			background #5C3566
-			focused_workspace #562263 #562263 #eaeaea
-			inactive_workspace #5C3566 #5C3566 #eaeaea
-			active_workspace #5C3566 #5C3566 #eaeaea
+			background #2e3436
+			focused_workspace #E2AA3B #E2AA3B #2e3436
+			inactive_workspace #2e3436 #2e3436 #eaeaea
+			active_workspace #2e3436 #2e3436 #eaeaea
 	}
 }
 
 # Run things here:
-# Start compton as daemon using the specified config file
-#exec compton --config ~/.config/compton/compton.conf -b
 
