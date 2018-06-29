@@ -30,7 +30,10 @@ alias lsd='ls -dl */'
 
 alias hidden='ls -ld .*'
 
+alias hosts='cat /etc/hosts'
+
 alias mkdir='mkdir -p'
+
 
 # Less verbose way of connecting to new wireless network using NetworkManager
 wifi_connect(){
@@ -45,7 +48,13 @@ wifi_connect(){
 	else
 		nmcli dev wifi con "$ssid" password "$psswd" name "$chosenName"
 	fi
+}
 
+# Displays a list of available wifi networks using NetworkManager
+wifi_scan(){
+
+	nmcli device wifi rescan
+	nmcli dev wifi list
 }
 
 # Extracts things
@@ -69,7 +78,6 @@ extract(){
     else
         echo "'$1' is not a valid file!"
     fi 
-
 }
 
 # Sets the background to the image supplied as argument
