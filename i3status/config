@@ -31,11 +31,11 @@ volume master {
 }
 
 battery 0 {
-        format = "%status"
-        format_down = " no battery "
-        status_chr = " charging! "
-        status_bat = " ⚡ battery "
-        status_full = ""
+        format = "%status %percentage %remaining"
+        format_down = " no battery"
+        status_chr = " charging!"
+        status_bat = " battery"
+        status_full = "f"
         path = "/sys/class/power_supply/BAT%d/uevent"
         low_threshold = 20
 }

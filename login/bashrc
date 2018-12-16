@@ -80,13 +80,6 @@ extract(){
     fi 
 }
 
-# Sets the background to the image supplied as argument
-set_bg_to(){
-
-	image="$1"
-	[ -z "$image" ] && echo "No image argument given" || feh --bg-scale "$image"
-
-}
 
 # Inserts a shebang to the first line of a new *.sh file
 # Note: exiting the file without saving will not discard the new *.sh file
@@ -96,16 +89,41 @@ vim(){
 	[[ $# -eq 1  ]] &&  [[ ! -e "$1" ]] &&  [[ $1 = *.sh ]] && echo "#!/bin/bash" > "$1" ; "$vim_executable" "$1"
 }
 
+
+# Display Settings
+
+# Sets the background to the image supplied as argument
+set_bg_to(){
+
+	image="$1"
+	[ -z "$image" ] && echo "No image argument given" || feh --bg-scale "$image"
+
+}
+
+
 # Turns secondary HDMI display output on if HDMI is plugged in, off if it isn't
 set_display(){
 
-	IN="eDP-1"
-	EXT="HDMI-1"
+	IN="eDP1"
+	EXT="HDMI1"
 	
 	if (xrandr | grep "$EXT disconnected"); then
 	    xrandr --output $IN --auto --output $EXT --off 
 	else
 	    xrandr --output $IN --auto --primary --output $EXT --auto --right-of $IN                   
 	fi
+}
+
+
+# Rotate display
+rotate(){
+
+	laptop="eDP1"
+	benq="HDMI1"
+	rotation="$1"
+
+	[[ -z $rotation ]] && echo "Provide a direction of rotation (left, right, normal)" && return 0
+	xrandr --output $benq --rotate $rotation --right-of $laptop
+
 }
 
