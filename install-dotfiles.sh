@@ -20,6 +20,7 @@ i3status_dotfile="${dotfiles_dir}/i3status/config"
 bashrc_dotfile="${dotfiles_dir}/login/bashrc"
 terminator_dotfile="${dotfiles_dir}/terminator/config"
 xmodmap_dotfile="${dotfiles_dir}/login/Xmodmap"
+screenlayout_dotfile="${dotfiles_dir}/screenlayout/default-desktop.sh"
 
 
 # Symlink targets
@@ -30,6 +31,7 @@ i3status_symlink_target="${HOME}/.config/i3status/config"
 bashrc_symlink_target="${HOME}/.bashrc"
 terminator_symlink_target="${HOME}/.config/terminator/config"
 xmodmap_symlink_target="${HOME}/.Xmodmap"
+screenlayout_symlink_target="${HOME}/.screenlayout/default-desktop.sh"
 
 
 create_symlink_to_dotfile(){
@@ -58,4 +60,5 @@ create_symlink_to_dotfile "$i3status_symlink_target" "$i3status_dotfile"
 create_symlink_to_dotfile "$bashrc_symlink_target" "$bashrc_dotfile"
 create_symlink_to_dotfile "$terminator_symlink_target" "$terminator_dotfile"
 create_symlink_to_dotfile "$xmodmap_symlink_target" "$xmodmap_dotfile"
+create_symlink_to_dotfile "$screenlayout_symlink_target" "$screenlayout_dotfile"
 
