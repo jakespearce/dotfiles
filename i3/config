@@ -186,4 +186,4 @@ bar {
 }
 
 # Run things here:
-
+exec sh '/home/yen/.screenlayout/default-desktop.sh'
