@@ -29,9 +29,15 @@ font pango: Monospace bold 11
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# start firefox
+bindsym $mod+b exec firefox
+
 # start a terminal
 bindsym $mod+Return exec terminator
 bindcode --release 110 exec terminator
+
+# start steam
+bindsym $mod+s exec steam
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -56,10 +62,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+#bindsym $mod+Shift+j move left
+#bindsym $mod+Shift+k move down
+#bindsym $mod+Shift+l move up
+#bindsym $mod+Shift+semicolon move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -77,9 +83,9 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+#bindsym $mod+s layout stacking
+#bindsym $mod+w layout tabbed
+#bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -187,3 +193,4 @@ bar {
 
 # Run things here:
 exec sh '/home/yen/.screenlayout/default-desktop.sh'
+exec sh '/home/yen/scripts/set-bg.sh'

@@ -20,6 +20,8 @@ alias ls='ls --color=auto'
 
 alias sl='ls'
 
+alias ll='ls -l'
+
 alias less='less -N'
 
 alias lock='i3lock -i ~/pictures/Wallpapers/windows-xp-bg.png -t -p win -u'
@@ -33,7 +35,6 @@ alias hidden='ls -ld .*'
 alias hosts='cat /etc/hosts'
 
 alias mkdir='mkdir -p'
-
 
 # Less verbose way of connecting to new wireless network using NetworkManager
 wifi_connect(){
