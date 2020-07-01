@@ -21,7 +21,7 @@ bashrc_dotfile="${dotfiles_dir}/login/bashrc"
 terminator_dotfile="${dotfiles_dir}/terminator/config"
 xmodmap_dotfile="${dotfiles_dir}/login/Xmodmap"
 screenlayout_dotfile="${dotfiles_dir}/screenlayout/default-desktop.sh"
-
+utility_scripts_path="${dotfiles_dir}/utility_scripts" # Not a dotfile but a directory
 
 # Symlink targets
 
@@ -32,7 +32,7 @@ bashrc_symlink_target="${HOME}/.bashrc"
 terminator_symlink_target="${HOME}/.config/terminator/config"
 xmodmap_symlink_target="${HOME}/.Xmodmap"
 screenlayout_symlink_target="${HOME}/.screenlayout/default-desktop.sh"
-
+utility_scripts_target="{HOME}/utility_scripts"
 
 create_symlink_to_dotfile(){
 
@@ -53,7 +53,6 @@ create_symlink_to_dotfile(){
 }
 
 
-# Function calls
 create_symlink_to_dotfile "$vimrc_symlink_target"  "$vimrc_dotfile"
 create_symlink_to_dotfile "$i3_symlink_target" "$i3_dotfile"
 create_symlink_to_dotfile "$i3status_symlink_target" "$i3status_dotfile"

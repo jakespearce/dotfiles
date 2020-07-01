@@ -36,6 +36,9 @@ bindsym $mod+b exec firefox
 bindsym $mod+Return exec terminator
 bindcode --release 110 exec terminator
 
+# start spotify
+bindsym $mod+m exec spotify
+
 # start steam
 bindsym $mod+s exec steam
 
