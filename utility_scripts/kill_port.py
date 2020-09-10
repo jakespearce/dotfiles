@@ -7,12 +7,6 @@ import os
 import subprocess
 import sys
 
-def get_port_number():
-    parser = argparse.ArgumentParser(description = 'Take a port number as an argument and kill the process listening on the port')
-    parser.add_argument('port_number', type=int, help='Port number (1024 - 65535)')
-    port_number = parser.parse_args().port_number
-    return port_number
-
 def check_port_number(port_number):
     # Check if the port number entered is viable and check that there is a process running on the port
     if port_number < 1024 or port_number > 65535:
@@ -36,6 +30,8 @@ def kill_process_for_port(port_number):
 
 
 if __name__ == '__main__':
-    port_number = get_port_number()
+    parser = argparse.ArgumentParser(description = 'Take a port number as an argument and kill the process listening on the port')
+    parser.add_argument('port_number', type=int, help='Port number (1024 - 65535)')
+    port_number = parser.parse_args().port_number
     check_port_number(port_number)
     kill_process_for_port(port_number)

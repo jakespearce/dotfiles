@@ -9,6 +9,11 @@
 # All in bold white, hostname is green, $ is in cyan
 PS1='\[\e[1m\][\u@\e[32;1m\h\e[m:\[\e[1m\]\w] \[\e[36;1m\]\$\[\e[0m\]\n'
 
+# Set custom keybindings when in GNOME
+if [[ $XDG_CURRENT_DESKTOP == "GNOME" ]]; then
+    xmodmap ~/.Xmodmap
+fi
+
 export PATH=$PATH:/home/yen/dotfiles/utility_scripts
 
 alias ..='cd ..'
