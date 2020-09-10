@@ -195,5 +195,5 @@ bar {
 }
 
 # Run things here:
-exec sh '/home/yen/.screenlayout/default-desktop.sh'
-exec sh '/home/yen/scripts/set-bg.sh'
+exec sh '/home/wrk/.screenlayout/default-desktop.sh'
+exec sh '/home/wrk/scripts/set-bg.sh'

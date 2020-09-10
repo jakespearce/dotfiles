@@ -14,7 +14,7 @@ if [[ $XDG_CURRENT_DESKTOP == "GNOME" ]]; then
     xmodmap ~/.Xmodmap
 fi
 
-export PATH=$PATH:/home/yen/dotfiles/utility_scripts
+export PATH=$PATH:/home/wrk/dotfiles/utility_scripts
 
 alias ..='cd ..'
 
