@@ -34,6 +34,8 @@ alias hosts='cat /etc/hosts'
 
 alias mkdir='mkdir -p'
 
+alias joplin='~/.joplin/Joplin.AppImage &'
+
 
 # Less verbose way of connecting to new wireless network using NetworkManager
 wifi_connect(){
@@ -84,10 +86,10 @@ extract(){
 # Inserts a shebang to the first line of a new *.sh file
 # Note: exiting the file without saving will not discard the new *.sh file
 vim_executable=$( which vim )
-vim(){
+#vim(){
 	
-	[[ $# -eq 1  ]] &&  [[ ! -e "$1" ]] &&  [[ $1 = *.sh ]] && echo "#!/bin/bash" > "$1" ; "$vim_executable" "$1"
-}
+#	[[ $# -eq 1  ]] &&  [[ ! -e "$1" ]] &&  [[ $1 = *.sh ]] && echo "#!/bin/bash" > "$1" ; "$vim_executable" "$1"
+#}
 
 
 # Display Settings
@@ -127,3 +129,13 @@ rotate(){
 
 }
 
+# Set AWS_PROFILE
+set_aws_profile(){
+	profile="$1"
+
+	export AWS_PROFILE="$profile"
+}
+
+bash /home/yen/.screenlayout/default-desktop.sh
+feh --bg-scale --no-xinerama /home/yen/home/yen/pictures/background/1440p-plus/saitama.png
+complete -C /usr/bin/terraform terraform
